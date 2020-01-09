@@ -40,10 +40,10 @@
                 answer.one('click', function (e) { // click to select an answer
                     answer.attr('disabled', 'disabled');
                     if ($(this)[0].classList[1] === 'true') { // check if answer is correct
-                        $(this).css('background-color', 'green');
+                        $(this).addClass('correct');
                         score.html(function (i, val) { return val * 1 + 1 }); // add 1 point to score count
                     } else { // check if answer is incorrect
-                        $(this).css('background-color', 'red');
+                        $(this).addClass('incorrect');
                     }
                     qOne.show();
                 })
@@ -59,10 +59,10 @@
                     answer.one('click', function (e) {
                         answer.attr('disabled', 'disabled');
                         if ($(this)[0].classList[1] === 'true') {
-                            $(this).css('background-color', 'green');
+                            $(this).addClass('correct');
                             score.html(function (i, val) { return val * 1 + 1 });
                         } else {
-                            $(this).css('background-color', 'red');
+                            $(this).addClass('incorrect');
                         }
                         qOne.hide();
                         qTwo.show();
@@ -80,12 +80,12 @@
                     answer.one('click', function (e) {
                         answer.attr('disabled', 'disabled');
                         if ($(this)[0].classList[1] === 'true') {
-                            $(this).css('background-color', 'green');
+                            $(this).addClass('correct');
                             score.html(function (i, val) {
                                 return val * 1 + 1
                             });
                         } else {
-                            $(this).css('background-color', 'red');
+                            $(this).addClass('incorrect');
                         }
                         qOne.hide();
                         qTwo.hide();
@@ -98,9 +98,9 @@
                     scoreTitle.hide();
                     reload.show();
                     if (score[0].innerText >= 2) {
-                        content.append('<div><h1>You passed!</h1><h2>Your score is ' + score[0].innerText + ".</h2></div>")
+                        content.append('<div class="result-meta"><h1>You passed!</h1><h2>Your score is ' + score[0].innerText + ".</h2></div>")
                     } else {
-                        content.append('<div><h1>You failed!</h1><h2>Your score is ' + score[0].innerText + ".</h2></div>")
+                        content.append('<div class="result-meta"><h1>You failed!</h1><h2>Your score is ' + score[0].innerText + ".</h2></div>")
                     }
                 })
 
@@ -119,10 +119,10 @@
                 answer.one('click', function (e) { // click to select an answer
                     answer.attr('disabled', 'disabled');
                     if ($(this)[0].classList[1] === 'true') { // check if answer is correct
-                        $(this).css('background-color', 'green');
+                        $(this).addClass('correct');
                         score.html(function (i, val) { return val * 1 + 1 }); // add 1 point to score count
                     } else { // check if answer is incorrect
-                        $(this).css('background-color', 'red');
+                        $(this).addClass('incorrect');
                     }
                     qOne.show();
                 })
@@ -138,10 +138,10 @@
                     answer.one('click', function (e) {
                         answer.attr('disabled', 'disabled');
                         if ($(this)[0].classList[1] === 'true') {
-                            $(this).css('background-color', 'green');
+                            $(this).addClass('correct');
                             score.html(function (i, val) { return val * 1 + 1 });
                         } else {
-                            $(this).css('background-color', 'red');
+                            $(this).addClass('incorrect');
                         }
                         qOne.hide();
                         qTwo.show();
@@ -159,12 +159,12 @@
                     answer.one('click', function (e) {
                         answer.attr('disabled', 'disabled');
                         if ($(this)[0].classList[1] === 'true') {
-                            $(this).css('background-color', 'green');
+                            $(this).addClass('correct');
                             score.html(function (i, val) {
                                 return val * 1 + 1
                             });
                         } else {
-                            $(this).css('background-color', 'red');
+                            $(this).addClass('incorrect');
                         }
                         qOne.hide();
                         qTwo.hide();

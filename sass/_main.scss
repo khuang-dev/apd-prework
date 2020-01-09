@@ -1,4 +1,71 @@
 body {
-    font-family: $cinzel;
+    font-family: $font;
     text-align: center;
+    text-transform: uppercase;
+}
+header {
+    margin-top: 4.5rem;
+}
+button {   
+    outline: none;
+    padding-top: 5px;
+    font-family: $font;
+    text-transform: uppercase;
+    &:hover {
+        cursor: pointer;
+        background-color: black;
+        color: white !important;
+        transition: 0.1s;
+    }
+}
+button:disabled {
+    color: black;
+}
+.correct:disabled {
+        background-color: green;
+        border-color: green;
+        color: white;
+}
+.incorrect:disabled {
+    background-color: red;
+    border-color: red;
+    color: white;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    h2 {
+        font-size: 3rem;
+    }
+}
+.title {
+    font-size: 15rem;
+}
+.score-title {
+    font-size: 5rem;
+}
+.quiz-title {
+    border: 3px black solid;
+    margin: 2rem auto;
+    font-size: 3rem;
+    width: 30rem;
+}
+.answers {
+    @extend .quiz-title;
+    font-size: 2rem;
+    margin: 1rem auto;
+}
+nav {
+    button {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        background-color: transparent;
+        border: 3px black solid;
+    }
+}
+.result-meta {
+    margin-top: 20vh;
+    h1 {
+        font-size: 5rem;
+    }
 }

@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url(https://fonts.googleapis.com/css?family=Cinzel:400,700,900&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -47,5 +47,70 @@ table {
   border-spacing: 0; }
 
 body {
-  font-family: "Cinzel", serif;
-  text-align: center; }
+  font-family: "Bebas Neue", serif;
+  text-align: center;
+  text-transform: uppercase; }
+
+header {
+  margin-top: 4.5rem; }
+
+button {
+  outline: none;
+  padding-top: 5px;
+  font-family: "Bebas Neue", serif;
+  text-transform: uppercase; }
+  button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white !important;
+    -webkit-transition: 0.1s;
+    transition: 0.1s; }
+
+button:disabled {
+  color: black; }
+
+.correct:disabled {
+  background-color: green;
+  border-color: green;
+  color: white; }
+
+.incorrect:disabled {
+  background-color: red;
+  border-color: red;
+  color: white; }
+
+.content {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column; }
+  .content h2 {
+    font-size: 3rem; }
+
+.title {
+  font-size: 15rem; }
+
+.score-title {
+  font-size: 5rem; }
+
+.quiz-title, .answers {
+  border: 3px black solid;
+  margin: 2rem auto;
+  font-size: 3rem;
+  width: 30rem; }
+
+.answers {
+  font-size: 2rem;
+  margin: 1rem auto; }
+
+nav button {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: 3px black solid; }
+
+.result-meta {
+  margin-top: 20vh; }
+  .result-meta h1 {
+    font-size: 5rem; }
