@@ -177,9 +177,9 @@
                     scoreTitle.hide();
                     reload.show();
                     if (score[0].innerText >= 2) {
-                        content.append('<div><h1>You passed!</h1><h2>Your score is ' + score[0].innerText + ".</h2></div>")
+                        content.append('<div class="result-meta"><h1>You passed!</h1><h2>Your score is ' + score[0].innerText + ".</h2></div>")
                     } else {
-                        content.append('<div><h1>You failed!</h1><h2>Your score is ' + score[0].innerText + ".</h2></div>")
+                        content.append('<div class="result-meta"><h1>You failed!</h1><h2>Your score is ' + score[0].innerText + ".</h2></div>")
                     }
                 })
             }
