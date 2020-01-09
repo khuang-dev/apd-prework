@@ -1,12 +1,13 @@
 (function ($) {
 
-// Variables
+    // Variables
     const content = $('.content');
     const title = $('.title');
     const scoreTitle = $('.score-title');
     const qOne = $('.question-one');
     const qTwo = $('.question-two');
     const Results = $('.results');
+    const reload = $('.try-again');
 
     $.get('src/quiz.json', function (d) { //fetch data
 
@@ -95,12 +96,14 @@
                     content.empty();
                     Results.hide();
                     scoreTitle.hide();
+                    reload.show();
                     if (score[0].innerText >= 2) {
                         content.append('<div><h1>You passed!</h1><h2>Your score is ' + score[0].innerText + ".</h2></div>")
                     } else {
                         content.append('<div><h1>You failed!</h1><h2>Your score is ' + score[0].innerText + ".</h2></div>")
                     }
                 })
+
             }
 
             // QUIZ 2
@@ -172,6 +175,7 @@
                     content.empty();
                     Results.hide();
                     scoreTitle.hide();
+                    reload.show();
                     if (score[0].innerText >= 2) {
                         content.append('<div><h1>You passed!</h1><h2>Your score is ' + score[0].innerText + ".</h2></div>")
                     } else {
@@ -180,7 +184,9 @@
                 })
             }
         })
-
+        reload.on('click', function () { // refresh page
+            location.reload();
+        })
     })
 
 })(jQuery);
